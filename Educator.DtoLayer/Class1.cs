@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Educator.BusinessLayer
+namespace Educator.DtoLayer
 {
 	public class Class1
 	{
