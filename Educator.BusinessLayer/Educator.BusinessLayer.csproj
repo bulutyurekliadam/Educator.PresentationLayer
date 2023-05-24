@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Educator.DataAccessLayer\Educator.DataAccessLayer.csproj" />
     <ProjectReference Include="..\Educator.EntityLayer\Educator.EntityLayer.csproj" />
   </ItemGroup>
 
