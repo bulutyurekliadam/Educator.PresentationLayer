@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Educator.EntityLayer.Concrete;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,13 @@ namespace Educator.DataAccessLayer.Concrete
 			optionsBuilder.UseSqlServer("Server=DESKTOP-H67U406; initial catalog =DbEdukator; integrated security = true; ");
 
 		}
+		public DbSet<Course> Courses{ get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public  DbSet<Contactinfo>Contactinfos { get; set; }
+		public DbSet <Contact> Contacts { get; set; }
+		public DbSet<SocialMedia> SocialMedias { get; set; }
+
+
+
 	}
 }
