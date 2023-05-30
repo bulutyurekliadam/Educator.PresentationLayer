@@ -32,8 +32,15 @@ namespace Educator.PresentationLayer
 			services.AddScoped<ICategoryDal, EfCategoryDal>();
 			services.AddScoped<ICategoryService, CategoryManager>();
 
+			services.AddScoped<ICourseDal, EfCourseDal>();
+			services.AddScoped<ICourseService, CourseManager>();
 
-			services.AddControllersWithViews();
+			services.AddScoped<ISocialMediaDal, EfSocialMediaDal>();
+			services.AddScoped<ISocialMediaService, SocialMediaManager>();
+
+
+
+            services.AddControllersWithViews();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
