@@ -19,7 +19,7 @@ namespace Educator.PresentationLayer.Controllers
         public IActionResult Index()
         {
             var values = _socialMediaService.TGetList();
-            return View();
+            return View(values);
         }
     }
 }
