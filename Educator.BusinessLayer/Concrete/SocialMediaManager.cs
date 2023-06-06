@@ -21,12 +21,12 @@ namespace Educator.BusinessLayer.Concrete
 
         public void TDelete(SocialMedia t)
         {
-            throw new NotImplementedException();
+            _socialMediaDal.Delete(t);
         }
 
         public SocialMedia TGetByID(int id)
         {
-            throw new NotImplementedException();
+            return _socialMediaDal.GetByID(id);
         }
 
         public List<SocialMedia> TGetList()
@@ -36,12 +36,12 @@ namespace Educator.BusinessLayer.Concrete
 
         public void TInsert(SocialMedia t)
         {
-            throw new NotImplementedException();
+            _socialMediaDal.Insert(t);
         }
 
         public void TUpdate(SocialMedia t)
         {
-            throw new NotImplementedException();
+            _socialMediaDal.Update(t);
         }
     }
 }
