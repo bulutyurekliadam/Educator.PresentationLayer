@@ -9,5 +9,7 @@ namespace Educator.BusinessLayer.Abstract
 {
 	public interface ICourseService: IGenericService<Course>
 	{
+		List<Course> TGetCoursesWithCategory();
+
 	}
 }

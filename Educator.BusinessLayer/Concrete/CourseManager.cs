@@ -28,7 +28,12 @@ namespace Educator.BusinessLayer.Concrete
 			return _courseDal.GetByID(id);
 		}
 
-		public List<Course> TGetList()
+        public List<Course> TGetCoursesWithCategory()
+        {
+			return _courseDal.GetCoursesWithCategory();
+        }
+
+        public List<Course> TGetList()
 		{
 			return _courseDal.GetList();
 		}
