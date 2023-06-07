@@ -3,6 +3,7 @@ using Educator.BusinessLayer.Concrete;
 using Educator.DataAccessLayer.Abstract;
 using Educator.DataAccessLayer.Concrete;
 using Educator.DataAccessLayer.EntityFramework;
+using Educator.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -37,10 +38,10 @@ namespace Educator.PresentationLayer
 
 			services.AddScoped<ISocialMediaDal, EfSocialMediaDal>();
 			services.AddScoped<ISocialMediaService, SocialMediaManager>();
+			services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
 
 
-
-            services.AddControllersWithViews();
+			services.AddControllersWithViews();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
