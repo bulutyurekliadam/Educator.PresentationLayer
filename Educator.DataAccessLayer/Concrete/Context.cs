@@ -21,8 +21,7 @@ namespace Educator.DataAccessLayer.Concrete
         public  DbSet<Contactinfo>Contactinfos { get; set; }
 		public DbSet <Contact> Contacts { get; set; }
 		public DbSet<SocialMedia> SocialMedias { get; set; }
-
-
-
+		public DbSet<Feature> Features { get; set; }
+		public DbSet<AboutGrid> AboutGrids{ get; set; }
 	}
 }

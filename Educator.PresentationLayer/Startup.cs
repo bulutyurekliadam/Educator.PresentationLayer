@@ -38,10 +38,17 @@ namespace Educator.PresentationLayer
 
 			services.AddScoped<ISocialMediaDal, EfSocialMediaDal>();
 			services.AddScoped<ISocialMediaService, SocialMediaManager>();
+
 			services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
 
+            services.AddScoped<IFeatureDal, EfFeatureDal>();
+            services.AddScoped<IFeatureService, FeatureManager>();
 
-			services.AddControllersWithViews();
+            services.AddScoped<IAboutGridDal, EfAboutGridDal>();
+            services.AddScoped<IAboutGridService, AboutGridManager>();
+
+
+            services.AddControllersWithViews();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

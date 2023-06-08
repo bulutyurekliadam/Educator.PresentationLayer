@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace Educator.DataAccessLayer.Abstract
 {
-	public  interface ICourseDal:IGenericDal<Course>
-	{
-		List<Course> GetCoursesWithCategory();
-		List<Course> GetCoursesWithCategories();
+    public  interface IFeatureDal : IGenericDal<Feature>
+    {
 
-	}
+    }
 }

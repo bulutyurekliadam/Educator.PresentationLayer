@@ -7,10 +7,7 @@ using System.Threading.Tasks;
 
 namespace Educator.BusinessLayer.Abstract
 {
-	public interface ICourseService: IGenericService<Course>
-	{
-		List<Course> TGetCoursesWithCategory();
-        List<Course> TGetCoursesWithCategories();
-
+    public interface IFeatureService:IGenericService<Feature>
+    {
     }
 }
