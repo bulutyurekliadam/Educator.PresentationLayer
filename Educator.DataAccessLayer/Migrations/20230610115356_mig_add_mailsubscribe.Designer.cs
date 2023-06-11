@@ -4,14 +4,16 @@ using Educator.DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Educator.DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230610115356_mig_add_mailsubscribe")]
+    partial class mig_add_mailsubscribe
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -253,28 +255,6 @@ namespace Educator.DataAccessLayer.Migrations
                     b.ToTable("Courses");
                 });
 
-            modelBuilder.Entity("Educator.EntityLayer.Concrete.CourseRegister", b =>
-                {
-                    b.Property<int>("CourseRegisterID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("AppUserID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CourseID")
-                        .HasColumnType("int");
-
-                    b.HasKey("CourseRegisterID");
-
-                    b.HasIndex("AppUserID");
-
-                    b.HasIndex("CourseID");
-
-                    b.ToTable("CourseRegisters");
-                });
-
             modelBuilder.Entity("Educator.EntityLayer.Concrete.Feature", b =>
                 {
                     b.Property<int>("FeatureID")
@@ -444,25 +424,6 @@ namespace Educator.DataAccessLayer.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("Educator.EntityLayer.Concrete.CourseRegister", b =>
-                {
-                    b.HasOne("Educator.EntityLayer.Concrete.AppUser", "AppUser")
-                        .WithMany("CourseRegisters")
-                        .HasForeignKey("AppUserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Educator.EntityLayer.Concrete.Course", "Course")
-                        .WithMany("CourseRegisters")
-                        .HasForeignKey("CourseID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AppUser");
-
-                    b.Navigation("Course");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.HasOne("Educator.EntityLayer.Concrete.AppRole", null)
@@ -514,19 +475,9 @@ namespace Educator.DataAccessLayer.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Educator.EntityLayer.Concrete.AppUser", b =>
-                {
-                    b.Navigation("CourseRegisters");
-                });
-
             modelBuilder.Entity("Educator.EntityLayer.Concrete.Category", b =>
                 {
                     b.Navigation("Courses");
-                });
-
-            modelBuilder.Entity("Educator.EntityLayer.Concrete.Course", b =>
-                {
-                    b.Navigation("CourseRegisters");
                 });
 #pragma warning restore 612, 618
         }

@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Educator.DataAccessLayer.Abstract
+namespace Educator.BusinessLayer.Abstract
 {
-	public interface IContactDal: IGenericDal<Contact>
-	{
-		public List<Contact> GetLast4Message();
+    public interface IMailSubscribeService : IGenericService<MailSubscribe>
+    {
 
-	}
+    }
 }

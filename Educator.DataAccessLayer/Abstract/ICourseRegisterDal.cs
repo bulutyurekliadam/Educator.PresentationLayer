@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace Educator.DataAccessLayer.Abstract
 {
-	public interface IContactDal: IGenericDal<Contact>
-	{
-		public List<Contact> GetLast4Message();
-
-	}
+    public interface ICourseRegisterDal : IGenericDal<CourseRegister>
+    {
+        List<CourseRegister> CourseRegisterListWithCoursesAndUsers();
+    }
 }

@@ -21,6 +21,8 @@ namespace Educator.EntityLayer.Concrete
 		public int CategoryID { get; set; }
         public Category Category { get; set; }
 
+        public List<CourseRegister> CourseRegisters { get; set; }
+
 
     }
 }

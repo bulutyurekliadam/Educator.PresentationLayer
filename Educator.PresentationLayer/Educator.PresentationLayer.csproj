@@ -26,4 +26,8 @@
     <ProjectReference Include="..\Educator.EntityLayer\Educator.EntityLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Shared\Components\_DashboardLast4MessagePartial\" />
+  </ItemGroup>
+
 </Project>
