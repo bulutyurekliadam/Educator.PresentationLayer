@@ -11,6 +11,8 @@ namespace Educator.DataAccessLayer.Abstract
 	{
 		List<Course> GetCoursesWithCategory();
 		List<Course> GetCoursesWithCategories();
+		List<Course> GetLast5Course();
+
 
 	}
 }

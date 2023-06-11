@@ -56,6 +56,7 @@ namespace Educator.PresentationLayer
 			services.AddScoped<ICourseRegisterDal, EfCourseRegisterDal>();
             services.AddScoped<ICourseRegisterService, CourseRegisterManager>();
 
+
             services.AddScoped<IContactDal, EfContactDal>();
             services.AddScoped<IContactService, ContactManager>();
 
