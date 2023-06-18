@@ -26,4 +26,9 @@
     <ProjectReference Include="..\Educator.EntityLayer\Educator.EntityLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Member\Data\" />
+    <Folder Include="Areas\Member\Models\" />
+  </ItemGroup>
+
 </Project>
