@@ -70,5 +70,9 @@ namespace Educator.PresentationLayer.Controllers
             _courseService.TUpdate(course);
             return RedirectToAction("Index");
         }
+        public IActionResult Courses()
+        {
+            return View();
+        }
     }
 }

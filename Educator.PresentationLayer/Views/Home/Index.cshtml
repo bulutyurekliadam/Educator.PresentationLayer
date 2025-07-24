@@ -1,8 +1,43 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!doctype html>
+<html lang="en">
+
+
+
+<body>
+
+
+
+    @await Component.InvokeAsync("_FeaturePartial")
+
+    @*@await Component.InvokeAsync("_ServicePartial")*@
+
+    <!--/about-section -->
+    @await Component.InvokeAsync("_AboutPartial")
+
+    <!--/home-stats-->
+    @await Component.InvokeAsync("_StatisticPartial")
+
+    <!--/popular-Courses-->
+    @await Component.InvokeAsync("_CoursePartial")
+
+    <!--/testimonials-->
+    @*<section class="w3l-testimonials" id="testimonials">
+        <!-- /grids -->
+        @await Component.InvokeAsync("_ReferencePartial")
+
+    </section>*@
+
+
+   @* @await Html.PartialAsync("~/Views/Home/SubscribePartial.cshtml")*@
+
+    <!--/footer-->
+
+
+</body>
+
+</html>
